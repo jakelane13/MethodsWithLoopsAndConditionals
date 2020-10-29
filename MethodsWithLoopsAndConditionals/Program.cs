@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MethodsWithLoopsAndConditionals
 {
@@ -7,16 +8,53 @@ namespace MethodsWithLoopsAndConditionals
     {
         static void Main(string[] args)
         {
-            //PrintRange();
-            //Threes();
-            //IsEqual();
-            //IsEven(1);
+            PrintRange();
+            Threes();
+            IsEqual();
+            IsEven(1);
+            IsPositive(1);
+            CanVote(18);
+        }
+
+        public static bool CanVote(int num)
+        {
+            Console.WriteLine("How old are you?");
+            num = int.Parse(Console.ReadLine());
+
+            if (num >= 18)
+            {
+                Console.WriteLine("Get out there and vote!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Sorry you can't vote yet :(");
+                return false;
+            }
+        }
+
+        public static bool IsPositive(int num)
+        {
+            Console.WriteLine("Enter a number");
+            num = int.Parse(Console.ReadLine());
+
+            if (num > 0)
+            {
+                Console.WriteLine("That number is positive!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("That number is negative");
+                return false;
+            }
         }
 
         public static bool IsEven(int num)
         {
             Console.WriteLine("Enter a number");
             num = int.Parse(Console.ReadLine());
+
             if (num % 2 == 0) 
             {
                 Console.WriteLine("Even");
