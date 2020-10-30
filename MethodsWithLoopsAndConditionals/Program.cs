@@ -11,9 +11,27 @@ namespace MethodsWithLoopsAndConditionals
             PrintRange();
             Threes();
             IsEqual();
-            IsEven(1);
+            IsEven(2);
             IsPositive(1);
             CanVote(18);
+            TenRange(10);
+        }
+
+        public static bool TenRange(int num)
+        {
+            Console.WriteLine("Give me a number");
+            num = int.Parse(Console.ReadLine());
+
+            if (num >= -10 && num <= 10)
+            {
+                Console.WriteLine("That number is in the range of -10 to 10");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("That number is not in the range of -10 to 10");
+                return false;
+            }
         }
 
         public static bool CanVote(int num)
